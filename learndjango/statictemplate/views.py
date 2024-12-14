@@ -3,4 +3,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("We are performing first test!!!")
+    mydict={'keybreaker':"We are now rendering from the template!!!!!"}
+    return render(request,"statictemplate/index.html",context=mydict)
